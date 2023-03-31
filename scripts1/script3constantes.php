@@ -1,11 +1,15 @@
 <?php
 # Con las palabras reseservadas const y define podemos crear constantes
 
-#const -> desde la version 7 de php
-#define -> forma clásica
+# const
+# define
 
 // Crea un array que sea constante donde almacenemos los días de la semana
 
-const DIAS_SEMANA = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+// const DIAS_SEMANA = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+const DIAS_SEMANA = array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
 
-echo join('<br>', DIAS_SEMANA); // join es para convertir el array en string y poder pintarlo
+echo join('<br>',DIAS_SEMANA);
+
+
+

@@ -10,10 +10,3 @@ $paises = array(
 // Listar todos los países menos España
 // Realizar un ciclo for
 // Preguntar si nos encontramos con el valor "España" y en caso positivo escribir la instrucción "continue"
-
-for ($i = 0; $i < count($paises); $i++) {
-	if ($paises[$i] == "España") {
-		echo "Continue<br>";
-	}
-	echo $paises[$i]."<br>";
-}

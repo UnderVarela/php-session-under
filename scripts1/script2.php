@@ -1,6 +1,6 @@
 <?php
 // Notas:
-# Los nombres de las variables son sensibles a mayusculas y minusculas
+# Los nombres de las variables son sensibles a mayusculas y minisculas
 # Los nombres de variables no pueden llevar espacios, empezar por numeros o llevar caracteres especiales como puntos o incluso la letra ñ
 
 # Tipos de datos:
@@ -16,19 +16,21 @@
 # gettype() ves el tipo de variable pasado como parámetro
 
 //declara dos variables de tipo texto con tu nombre y apellidos Concatena y observa el resultado por pantalla.
-$nombre = 'Jose Manuel';
-$apellidos = 'Varela';
-echo $nombre.' '.$apellidos.'<br>';
 
+$nombre = 'Xurxo';
+$apellidos = 'González Tenreiros';
+
+echo $nombre, ' ', $apellidos,'<br>';
+
+$edad;
 
 //crea una variable y no la incialices. 
 //Utiliza la función gettype() para ver el tipo de datos
-
-$variable = '';
-echo gettype($nombre), '<br>';
-echo gettype(true), '<br>';
-echo gettype($apellidos), '<br>';
-echo gettype($variable), '<br>';
+echo gettype($nombre),'<br>';
+echo gettype(true),'<br>';
+echo gettype($edad),'<br>';
+echo gettype($noexisto),'<br>';
+echo gettype([]),'<br>';
 
 
 

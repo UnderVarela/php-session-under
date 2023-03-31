@@ -51,3 +51,43 @@
 # } else {
 # 	echo "El mes que pusiste no tiene celebracion";
 # }
+?>
+
+<?php 
+extract($_POST);
+// Necesitamos poder trabajar con la variable. Y el control de formulario
+// siempre devuelve string, asi que hay que convertirlo:
+//$edadToInt = intval($edad); // (int) $edad // <-- casting, esto seria otra forma de hacerlo.
+//?>
+
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Ejercicio 1. Mayor edad</title>
+  </head>
+  <body>
+    <form method="POST">
+      <fieldset>
+        <legend>Acceso por edad</legend>
+        <label for="edad">Introduzca su edad:</label><br>
+        <input value="<?=$edad??0?>" type="number" name="edad" required min="0" max="100">
+        <button name="submit">Acceder</button>
+      </fieldset>
+      <?php 
+      if(isset($edad)) {
+
+        $edadToInt = intval($edad);
+        if ($edadToInt > 17) echo "<strong> Bienvenido a la web!";
+        else echo "<strong>ACCESO PROHIBIDO";
+      }
+
+      ?>
+
+    </form>
+    
+  </body>
+  </html>

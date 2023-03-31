@@ -1,50 +1,23 @@
 <?php
 //Crea un arreglo que me cargue los meses de un año y los visualicemos a posteriori en una lista ordenada de HTML
-// echo "<ol>";
-// $months = [
-//   "Enero",
-//   "Febrero",
-//   "Marzo",
-//   "Abril",
-//   "Mayo",
-//   "Junio",
-//   "Julio",
-//   "Agosto",
-//   "Septiembre",
-//   "Octubre",
-//   "Noviembre",
-//   "Diciembre",
-// ];
-
-// for($i=0; $i < count($months); $i++) {
-//   $year = $months[$i];
-//   echo "<li>$year</li>"; 
-// }
-// // echo "<li>$year[0]</li>";
-// echo "</ol>";
-
-
-// Xurxo:
-
 define('MESES', [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre'
 ]);
-
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,14 +25,32 @@ define('MESES', [
   <title>Meses año</title>
 </head>
 <body>
-  <ol>
-    <?php 
-    foreach(MESES as $mes):
+
+  <?php
+  echo '<ol>';
+  // foreach(MESES as $mes) {
+  //   echo "<li>$mes</li>";
+  // }
+  for ($i = 0; $i < count(MESES); $i++ ) {
+    echo "<li>",MESES[$i],"</li>";
+  }
+  echo '</ol>';
+  ?>
+  
+    <!-- <?php
+    foreach(MESES as $index => $mes):
     ?>
-    <li><?=$mes?></li>
+     
+        <section>
+          <h1><?php echo $index+1;?></h1>
+          <p><?=$mes?></p>
+        </section>
+     
     <?php
     endforeach;
-    ?>
-  </ol>
+    ?> -->
+  
 </body>
 </html>
+
+
