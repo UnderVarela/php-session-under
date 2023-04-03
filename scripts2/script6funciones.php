@@ -26,7 +26,7 @@ function alert (mixed $mensaje) : void {
 		echo $mensaje;
 }
 
-alert();
+alert(2);
 
 
 
@@ -35,7 +35,9 @@ alert();
 
 //Modifica la función que viene a continuación para que a partir de un parámetro númerico
 //(entre 1 y 7) devuelva el día de la semana
-function getDia(){
+function getDia(int $dia): string {
 	$array = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
+	return $array[$dia-1]?? 'Día no válido';
+	}
 	
-}
+echo getDia(1);

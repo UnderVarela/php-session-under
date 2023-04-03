@@ -4,17 +4,26 @@ $tortilla= array(
 	"tiempo"=>"5 minutos","ingredientes"=>
 	array("huevo","patatas","sal"),"receta"=>
 	"Batir un par de huevos, añadir sal a gusto. 
-	Pelar unas patatas y dorarlas, mezclar con el huevo y freir"
+	<br>Pelar unas patatas y dorarlas, mezclar con el huevo y freir"
 );
 
 
 
 //añade al array ingredientes de la tortilla la cebolla (array_push)
 
+array_push($tortilla['ingredientes'], 'cebolla');
+
+// print_r($tortilla);
+
 
 //utilizar la functión extract() para extraer las variables y utilizarlas en la tabla siguiente
 
+extract($tortilla);
 
+// pintar ingredientes:
+function pintaIngredientes (array $ingredientes): string {
+	return join('<br>', $ingredientes);
+}
 
 ?>
 <!DOCTYPE html>
@@ -44,12 +53,12 @@ $tortilla= array(
 			</th>
 		</tr>
 		<tr>
-			<td>Tu código aquí</td>
-			<td>Tu código aquí</td>
-			<td>Tu código aquí</td>
+			<td><?=$tiempo?></td>
+			<td><?= pintaIngredientes($ingredientes)?></td>
+			<td><?=$receta?></td>
 		</tr>
 		<tr>
-			<td colspan="3">Número de ingredientes: Tú código aquí</td>
+			<td colspan="3">Número de ingredientes: <?=count($ingredientes)?></td>
 		</tr>
 	</table>
 </body>
